@@ -1,1 +1,265 @@
+public class Cake extends javax.swing.JFrame {
 
+    public Cake() {
+        initComponents();
+    }
+
+    @SuppressWarnings("unchecked")                       
+    private void initComponents() {
+
+        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        cbxChocolate = new javax.swing.JCheckBox();
+        cbxCherries = new javax.swing.JCheckBox();
+        cbxWhippedcream = new javax.swing.JCheckBox();
+        cbxpriceSmall = new javax.swing.JCheckBox();
+        cbxpriceMedium = new javax.swing.JCheckBox();
+        cbxpriceLarge = new javax.swing.JCheckBox();
+        jLabel4 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        txtOrderdetail = new javax.swing.JTextArea();
+        btnOrder = new javax.swing.JButton();
+        btnExit = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel1.setText("CAKE MENU");
+
+        jLabel3.setText("BlackForest with available topping:");
+
+        jLabel7.setText("Price");
+
+        cbxChocolate.setText("1. Chocolate");
+        cbxChocolate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxChocolateActionPerformed(evt);
+            }
+        });
+
+        cbxCherries.setText("2. Cherries");
+        cbxCherries.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxCherriesActionPerformed(evt);
+            }
+        });
+
+        cbxWhippedcream.setText("3. Whipped Cream");
+
+        cbxpriceSmall.setText("1. Small      : RM 45.00");
+
+        cbxpriceMedium.setText("2. Medium  : RM 65.00");
+        cbxpriceMedium.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxpriceMediumActionPerformed(evt);
+            }
+        });
+
+        cbxpriceLarge.setText("3. Large      : RM 80.00");
+
+        jLabel4.setText("Cake Order Detail:");
+
+        txtOrderdetail.setColumns(20);
+        txtOrderdetail.setRows(5);
+        jScrollPane1.setViewportView(txtOrderdetail);
+
+        btnOrder.setText("Order");
+        btnOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOrderActionPerformed(evt);
+            }
+        });
+
+        btnExit.setText("Exit");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
+
+        btnReset.setText("Reset");
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResetActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("================================");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel7)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cbxpriceSmall)
+                            .addComponent(cbxChocolate)
+                            .addComponent(cbxCherries)
+                            .addComponent(cbxWhippedcream)
+                            .addComponent(cbxpriceMedium)
+                            .addComponent(cbxpriceLarge)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btnOrder)
+                                .addGap(69, 69, 69)
+                                .addComponent(btnReset))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 329, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(190, 190, 190)
+                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel5)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(193, 193, 193)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5)
+                .addGap(11, 11, 11)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cbxChocolate)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cbxCherries)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cbxWhippedcream)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel7)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(cbxpriceSmall)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cbxpriceMedium)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cbxpriceLarge)
+                .addGap(15, 15, 15)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnReset)
+                    .addComponent(btnOrder))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(3, 3, 3)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(btnExit)
+                .addContainerGap())
+        );
+
+        pack();
+    }                     
+
+    private void cbxChocolateActionPerformed(java.awt.event.ActionEvent evt) {                                             
+
+    }                                            
+
+    private void cbxCherriesActionPerformed(java.awt.event.ActionEvent evt) {                                            
+
+    }                                           
+
+    private void cbxpriceMediumActionPerformed(java.awt.event.ActionEvent evt) {                                               
+
+    }                                              
+
+    private void btnOrderActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        String Order_detail;
+        Order_detail = "";
+        int pay = 0;
+        if(cbxChocolate.isSelected()){
+            pay = pay + 10;
+            Order_detail += "1st Topping  :Chocolate" + "\n";
+        }if(cbxCherries.isSelected()){
+            pay = pay + 10;
+            Order_detail += "2nd Topping :Cherries" + "\n";
+        }if(cbxWhippedcream.isSelected()){ 
+            pay = pay + 10;  
+            Order_detail += "3rd Topping  :Whipped Cream" + "\n";
+        }if(cbxpriceSmall.isSelected()){
+            pay = pay + 45;
+            Order_detail += "Size                :Small" + "\n";
+        }if(cbxpriceMedium.isSelected()){
+            pay = pay + 65; 
+            Order_detail += "Size                :Medium" + "\n";
+        }if(cbxpriceLarge.isSelected()){
+            pay = pay + 80;
+            Order_detail += "Size                :Large" + "\n";
+        }
+        txtOrderdetail.setText(Order_detail + "=========================================" + "\n" + "Total Price    : RM " + pay);
+        
+    }                                        
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        System.exit(0);
+    }                                       
+
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        cbxChocolate.setSelected(false);
+        cbxCherries.setSelected(false);
+        cbxWhippedcream.setSelected(false);
+        cbxpriceSmall.setSelected(false);
+        cbxpriceMedium.setSelected(false);
+        cbxpriceLarge.setSelected(false);
+        txtOrderdetail.setText("");
+    }                                        
+
+    public static void main(String args[]) {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Cake.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Cake.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Cake.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Cake.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Cake().setVisible(true);
+            }
+        });
+    }
+           
+    private javax.swing.JButton btnExit;
+    private javax.swing.JButton btnOrder;
+    private javax.swing.JButton btnReset;
+    private javax.swing.JCheckBox cbxCherries;
+    private javax.swing.JCheckBox cbxChocolate;
+    private javax.swing.JCheckBox cbxWhippedcream;
+    private javax.swing.JCheckBox cbxpriceLarge;
+    private javax.swing.JCheckBox cbxpriceMedium;
+    private javax.swing.JCheckBox cbxpriceSmall;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea txtOrderdetail;                 
+}
