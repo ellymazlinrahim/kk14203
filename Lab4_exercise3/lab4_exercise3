@@ -1,0 +1,92 @@
+import java.util.Scanner;
+
+class Menu{
+   private String item;
+   private double price;
+
+   Menu(String x, double y){
+      item = x;
+      price = y;
+   }
+
+   public double getPrice(){
+      return price;
+   }
+}
+
+
+public class Lab4_Exercise3_test3 {
+
+   public static void main(String args[]) throws java.io.IOException{
+      char choice;
+      int qty;
+      double total=0.0;
+      Scanner scan = new Scanner(System.in);
+
+      System.out.println("Menu Order System");
+      System.out.println("----------------------------------------------");
+      System.out.println("[1] Nasi Lemak, RM2.00");
+      System.out.println("[2] Roti             , RM1.00");
+      System.out.println("[3] Teh Tarik     , RM1.50");
+      System.out.println("[4] Kopi O        , RM1.00");
+      System.out.println("----------------------------------------------");
+      System.out.println("Press n for new order | q to exit.");
+
+     do{
+        System.out.print("Add order: ");
+        choice = (char) System.in.read();
+
+        String[] item = new String[4];
+        item[0] = "Nasi Lemak";
+        item[1] = "Roti";
+        item[2] = "Teh Tarik";
+        item[3] = "Kopi O";
+
+        double[] price = new double[4];
+        price[0] = 2.0;
+        price[1] = 1.0;
+        price[2] = 1.5;
+        price[3] = 1.0;
+
+        Menu[] menu = new Menu[4];
+        int x = 0; 
+        while(x < 4) { 
+        menu[x] = new Menu(item[x], price[x]); 
+        x++ ;
+        }
+        switch(choice){
+        case '1':
+        System.out.print("\t" + item[0] + " - ");
+        System.out.print("Quantity: ");
+        qty = scan.nextInt();
+        total += (menu[0].getPrice()*qty);
+        System.out.printf("\tPrice: RM %.2f \n", (menu[0].getPrice()*(qty)));
+        break;
+        case '2':
+        System.out.print("\t" + item[1] + " - ");
+        System.out.print("Quantity: ");
+        qty = scan.nextInt();
+        total += (menu[1].getPrice()*qty);
+        System.out.printf("\tPrice: RM %.2f \n", (menu[1].getPrice()*(qty)));
+        break;
+        case '3':
+        System.out.print("\t" + item[2] + " - ");
+        System.out.print("Quantity: ");
+        qty = scan.nextInt();
+        total += (menu[2].getPrice()*qty);
+        System.out.printf("\tPrice: RM %.2f \n", (menu[2].getPrice()*(qty)));
+        break;
+        case '4':
+        System.out.print("\t" + item[3] + " - ");
+        System.out.print("Quantity: ");
+        qty = scan.nextInt();
+        total += (menu[3].getPrice()*qty);
+        System.out.printf("\tPrice: RM %.2f \n", (menu[3].getPrice()*(qty)));
+        break;
+      }
+  } while (choice!='q');
+
+  System.out.println("\nThank you for your order.");
+  System.out.printf("Total due: RM %.2f", total);
+ }
+}
